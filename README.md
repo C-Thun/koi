@@ -13,7 +13,7 @@
 ## Install
 
 ```fish
-$ omf install koi
+$ omf install https://github.com/veeshan-io/koi
 ```
 
 
