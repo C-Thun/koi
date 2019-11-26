@@ -1,6 +1,6 @@
-function _scarlet._command -a name
+function _scarlet._command
   set -l commands setup bbbb
-  if name
+  if argv[1]
     for command in $commands
       if test $name = $command
         echo $name
