@@ -1,6 +1,3 @@
-function koi -d "My package"
+function koi -d "koi for you"
   # Package entry-point
-end
-
-function renew-repos
 end
