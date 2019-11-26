@@ -14,6 +14,14 @@ if test not -e $HOME/local/klib
   mkdir -p $HOME/local/klib
 end
 
+autoload $path/functions/koi.deno
+autoload $path/functions/koi.git
+autoload $path/functions/scarlet
 
-echo $path
-# autoload $path/
+complete -c scarlet -f
+for subcommand in (_scarlet._command)
+  complete -c scarlet -f -a $subcommand -n "__fish_use_subcommand"
+end
+
+echo (_scarlet._command setup)
+echo (_scarlet._command)
