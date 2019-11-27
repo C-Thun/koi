@@ -1,4 +1,4 @@
-function koi.git
+function scarlet
   # Parse any options before the command name.
   while set -q argv[1]
     switch $argv[1]
