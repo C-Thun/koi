@@ -22,6 +22,3 @@ complete -c scarlet -f
 for subcommand in (_scarlet._command)
   complete -c scarlet -f -a $subcommand -n "__fish_use_subcommand"
 end
-
-echo (_scarlet._command setup)
-echo (_scarlet._command)
