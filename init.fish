@@ -22,6 +22,12 @@ autoload $path/functions/koi.deno
 autoload $path/functions/koi.git
 autoload $path/functions/scarlet
 
+# Set completions for koi
+complete -c koi -f
+for subcommand in (_koi._command)
+  complete -c koi -f -a $subcommand -n "__fish_use_subcommand"
+end
+
 # Set completions for scarlet
 complete -c scarlet -f
 for subcommand in (_scarlet._command)
