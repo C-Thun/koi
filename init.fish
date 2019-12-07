@@ -17,6 +17,7 @@ if not test -e $HOME/local/klib
 end
 
 # Autoload
+autoload $path/functions/koi
 autoload $path/functions/koi.deno
 autoload $path/functions/koi.git
 autoload $path/functions/scarlet
