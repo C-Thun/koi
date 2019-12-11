@@ -18,14 +18,19 @@ end
 
 # Autoload
 autoload $path/functions/koi
-autoload $path/functions/koi.deno
-autoload $path/functions/koi.git
+autoload $path/functions/kit
 autoload $path/functions/scarlet
 
 # Set completions for koi
 complete -c koi -f
 for subcommand in (_koi._command)
   complete -c koi -f -a $subcommand -n "__fish_use_subcommand"
+end
+
+# Set completions for kit
+complete -c kit -f
+for subcommand in (_kit._command)
+  complete -c kit -f -a $subcommand -n "__fish_use_subcommand"
 end
 
 # Set completions for scarlet
