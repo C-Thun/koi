@@ -1,13 +1,9 @@
 function _kit.renew-repos -a target
-  if test ! $target
-    set -l target .
+  if test ! "$target"
+    set target .
   end
-  set -l br (git -C $target branch | grep '*')
+  set -l br (git -C $target branch | grep '*' | string split " ")
 
-  echo $br
-  # [[ ! $target ]] && target='.'
-  # local br=`git -C $target branch | grep '*'`;
-  # br=${br/* /}
-  # git -C $target fetch --all
-  # git -C $target reset --hard origin/${br}
+  git -C $target fetch --all
+  git -C $target reset --hard origin/$br[2]
 end
