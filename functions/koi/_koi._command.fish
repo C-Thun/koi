@@ -1,5 +1,5 @@
 function _koi._command -a name
-  set -l commands add-lib rebuild-lib
+  set -l commands _koi.apply-lib
   if test (count $argv) -gt 0
     for command in $commands
       if test "$name" = "$command"
