@@ -7,7 +7,7 @@ function _koi.apply-lib -a uri
     if test -d $name[2]
       kit renew-repos $name[2]
     else
-      git clone uri
+      git clone $uri
     end
   end
 
