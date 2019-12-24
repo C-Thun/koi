@@ -32,9 +32,10 @@ function _koi.up-lib -a uri
 
   # 重新构建
   for file in (echo ~/local/klib/*/bin/*)
+    chmod +x $file
+
     set rootname (basename (echo $file | sed 's/\.[^.]*$//'))
     if not test -e ~/local/bin/$rootname
-      chmod +x $file
       ln -s $file ~/local/bin/$rootname
     end
   end
