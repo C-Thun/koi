@@ -1,4 +1,4 @@
-<img src="logo.webp" align="left" width="144px" height="144px"/>
+<img src="./logo.webp" align="left" width="144px" height="144px"/>
 
 # Koi
 
