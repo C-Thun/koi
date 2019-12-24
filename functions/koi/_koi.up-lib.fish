@@ -34,5 +34,6 @@ function _koi.up-lib -a uri
   for file in (echo ~/local/klib/*/bin/*)
     set rootname (basename (echo $file | sed 's/\.[^.]*$//'))
     ln -s $file ~/local/bin/$rootname
+    chmod +x $file
   end
 end
