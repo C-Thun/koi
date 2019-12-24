@@ -22,8 +22,17 @@ function _koi.up-lib -a uri
     end
   end
 
+  # 移除local/bin下的软链
+  for file in (ls ~/local/bin)
+    if test -L ~/local/bin/$file
+      and not test -e ~/local/bin/$file
+      rm ~/local/bin/$file
+    end
+  end
+
   # 重新构建
-  for file in (ls ~/local/klib/*/bin)
-    echo $file
+  for file in (echo ~/local/klib/*/bin/*)
+    set rootname (basename (echo $file | sed 's/\.[^.]*$//'))
+    ln -s $file ~/local/bin/$rootname
   end
 end
