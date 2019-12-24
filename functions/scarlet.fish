@@ -37,7 +37,8 @@ function scarlet
   end
 
   # Lookup the function for the requested command.
-  if not set command_name (_scarlet._command $command)
+  set -l command_name (_scarlet._command $command)
+  if test not $command_name
     echo (omf::err)"Unknown command: $command"(omf::off) >&2
     return $OMF_UNKNOWN_OPT
   end

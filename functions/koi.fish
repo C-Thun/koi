@@ -38,7 +38,7 @@ function koi -d "koi for you"
 
   # Lookup the function for the requested command.
   set -l command_name (_koi._command $command)
-  if test !$command_name
+  if test not $command_name
     echo (omf::err)"Unknown command: $command"(omf::off) >&2
     return $OMF_UNKNOWN_OPT
   end
