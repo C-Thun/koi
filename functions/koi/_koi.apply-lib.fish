@@ -7,7 +7,7 @@ function _koi.apply-lib -a uri
     if test -d $path
       kit renew-repos ~/local/klib/$path
     else
-      git -C ~/local/klib/$path clone $uri
+      git -C ~/local/klib clone $uri
     end
   end
 
