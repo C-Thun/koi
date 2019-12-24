@@ -23,7 +23,14 @@ koi
 ### Apply custom lib
 
 ```fish
-koi apply-lib
+# add / update lib with repos url
+koi up-lib git@github.com:youracc/project
+
+# update lib with repos url
+koi up-lib project
+
+# update all libs
+koi up-lib
 ```
 
 ## Kit foundation library
