@@ -20,6 +20,18 @@ omf install https://github.com/veeshan-io/koi
 koi
 ```
 
+### Apply custom lib
+
+```fish
+koi apply-lib
+```
+
+## Scarlet integration
+
+```fish
+scarlet
+```
+
 # License
 
 [MIT][mit] © [veeshan-io][author] et [al][contributors]

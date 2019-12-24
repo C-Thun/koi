@@ -38,7 +38,7 @@ function kit -d "Improve git"
 
   # Lookup the function for the requested command.
   set -l command_name (_kit._command $command)
-  if test not $command_name
+  if test -z "$command_name"
     echo (omf::err)"Unknown command: $command"(omf::off) >&2
     return $OMF_UNKNOWN_OPT
   end
