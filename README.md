@@ -26,10 +26,16 @@ koi
 koi apply-lib
 ```
 
+## Kit foundation library
+
+```fish
+kit
+```
+
 ## Scarlet integration
 
 ```fish
-scarlet
+scarlet setup
 ```
 
 # License
