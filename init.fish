@@ -21,6 +21,8 @@ autoload $path/functions/koi
 autoload $path/functions/kit
 autoload $path/functions/scarlet
 
+# Load init
+
 # Set completions for koi
 complete -c koi -f
 for subcommand in (_koi._command)

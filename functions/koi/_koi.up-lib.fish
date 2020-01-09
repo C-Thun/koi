@@ -18,6 +18,7 @@ function _koi.up-lib -a uri
   else
     # 全部更新
     for path in (ls ~/local/klib)
+      echo Renew repository: [ $path ]
       kit renew-repos ~/local/klib/$path
     end
   end

@@ -8,6 +8,10 @@
 [![Fish Shell Version](https://img.shields.io/badge/fish-v3.0.2-007EC7.svg?style=flat-square)](https://fishshell.com)
 [![Oh My Fish Framework](https://img.shields.io/badge/Oh%20My%20Fish-Framework-007EC7.svg?style=flat-square)](https://www.github.com/oh-my-fish/oh-my-fish)
 
+## Plan
+
+- 对klib支持init.fish载入，并在没有klib的情况下不会报错
+
 ## Install
 
 ```fish
