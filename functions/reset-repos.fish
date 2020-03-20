@@ -1,4 +1,4 @@
-function _kit.reset-repos -a target
+function reset-repos -a target
   if test ! "$target"
     set target .
   end

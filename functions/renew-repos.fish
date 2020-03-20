@@ -1,4 +1,4 @@
-function _kit.renew-repos -a target
+function renew-repos -a target
   if test ! "$target"
     set target .
   end

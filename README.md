@@ -10,7 +10,7 @@
 
 ## Plan
 
-- 对klib支持init.fish载入，并在没有klib的情况下不会报错
+- [ ] 对klib支持init.fish载入，并在没有klib的情况下不会报错
 
 ## Install
 
@@ -24,7 +24,17 @@ omf install https://github.com/veeshan-io/koi
 koi
 ```
 
-### Apply custom lib
+## Features
+
+### Custom Libs
+
+极简的个人脚本插入。创建个人脚本只需要以下几步:
+
+#### 1. 创建个人脚本仓库
+
+个人脚本目前支持的结构如下：
+
+
 
 ```fish
 # add / update lib with repos url
@@ -35,18 +45,6 @@ koi up-lib project
 
 # update all libs
 koi up-lib
-```
-
-## Kit foundation library
-
-```fish
-kit
-```
-
-## Scarlet integration
-
-```fish
-scarlet setup
 ```
 
 # License

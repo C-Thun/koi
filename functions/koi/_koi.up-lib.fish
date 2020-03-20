@@ -11,15 +11,15 @@ function _koi.up-lib -a uri
 
     # 导入项目
     if test -d ~/local/klib/$path
-      kit renew-repos ~/local/klib/$path
+      renew-repos ~/local/klib/$path
     else
       git -C ~/local/klib clone $uri
     end
   else
     # 全部更新
     for path in (ls ~/local/klib)
-      echo Renew repository: [ $path ]
-      kit renew-repos ~/local/klib/$path
+      echo - Renew repository: [ $path ]
+      renew-repos ~/local/klib/$path
     end
   end
 
