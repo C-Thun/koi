@@ -32,12 +32,18 @@ function _koi.up-lib -d 'update/install klib' -a uri
   end
 
   # 重新构建
-  for file in (echo ~/local/klib/*/bin/*)
-    chmod +x $file
+  set -l klib_count (count ls local/bin/)
+  if test $klib_count -gt 2
+    for file in (echo ~/local/klib/*/bin/*)
+      chmod +x $file
 
-    set rootname (basename (echo $file | sed 's/\.[^.]*$//'))
-    if not test -e ~/local/bin/$rootname
-      ln -s $file ~/local/bin/$rootname
+      set rootname (basename (echo $file | sed 's/\.[^.]*$//'))
+      if not test -e ~/local/bin/$rootname
+        ln -s $file ~/local/bin/$rootname
+      end
     end
+  else
+    echo "There are not klib installed."
   end
+
 end
