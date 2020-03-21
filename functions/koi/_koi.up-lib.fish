@@ -43,7 +43,7 @@ function _koi.up-lib -d 'update/install klib' -a uri
       end
     end
   else
-    echo "There are not klib installed."
+    echo "There are not klib installed now."
   end
 
 end
