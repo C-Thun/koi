@@ -1,4 +1,4 @@
-function _koi.up-lib -a uri
+function _koi.up-lib -d 'update/install klib' -a uri
   if test "$uri"
 
     set is_url (string match -r '^(http\:|https\:|git\@).*' $uri)
@@ -11,7 +11,7 @@ function _koi.up-lib -a uri
 
     # 导入项目
     if test -d ~/local/klib/$path
-      renew-repos ~/local/klib/$path
+      koi renew-repos ~/local/klib/$path
     else
       git -C ~/local/klib clone $uri
     end
@@ -19,7 +19,7 @@ function _koi.up-lib -a uri
     # 全部更新
     for path in (ls ~/local/klib)
       echo - Renew repository: [ $path ]
-      renew-repos ~/local/klib/$path
+      koi renew-repos ~/local/klib/$path
     end
   end
 
