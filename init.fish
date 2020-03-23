@@ -28,4 +28,4 @@ end
 
 # Load init
 # TODO: 待完成
-koi build-lib
+# koi build-lib
