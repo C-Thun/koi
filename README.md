@@ -1,6 +1,6 @@
 <img src="./logo.webp" align="left" width="144px" height="144px"/>
 
-# Koi
+# koi
 
 > `Comfort Shell Environment` base on [Oh My Fish][omf-link].
 
