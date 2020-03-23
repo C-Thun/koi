@@ -7,7 +7,7 @@ function _koi.command -a name
     end
   end
 
-  if set -q $name
+  if not test -z $name
     for command in $commands
       if test "$name" = "$command"
         echo $command
