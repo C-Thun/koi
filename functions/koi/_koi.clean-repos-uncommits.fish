@@ -1,4 +1,4 @@
-function _koi.reset-repos -a target
+function _koi.clean-repos-uncommits -a target
   if test ! "$target"
     set target .
   end
