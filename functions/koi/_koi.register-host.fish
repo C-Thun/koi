@@ -4,7 +4,7 @@ function _koi.register-host -a domain ip apply
     set cmd $cmd -i
   end
 
-  if test -z $ip
+  if test "$ip" = "0"
     koi exec-cmd "$cmd '/\t$domain\t\$/d' /etc/hosts" y
   else
     koi exec-cmd "$cmd '/\t$domain\t\$/d' /etc/hosts" y
