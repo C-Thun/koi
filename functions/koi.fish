@@ -1,4 +1,4 @@
-function koi -d "koi for you"
+function _koi
   # Parse any options before the command name.
   while set -q argv[1]
     switch $argv[1]

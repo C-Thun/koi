@@ -1,4 +1,4 @@
-function _koi.install-deb -d '下载并安装某个网络上的deb包' -a url
+function _koi.install-deb -a url
   echo install-deb $url
   # local file=${1##*/}
   # wget -c $1 -O /tmp/${file} -o /tmp/install-deb.log

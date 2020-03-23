@@ -1,4 +1,4 @@
-function _koi.build-lib -d 'build/rebuild klib' -a uri
+function _koi.link-bin-file -a dir uri
   # 重新构建
   set -l klib_count (count ls local/bin/)
   if test $klib_count -gt 2

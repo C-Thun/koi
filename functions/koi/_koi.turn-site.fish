@@ -1,4 +1,4 @@
-function _koi.turn-site -d 'turn on/off site nginx site conf' -a site
+function _koi.turn-site -a site
   # if [ ! $(id -u) = 0 ];then
   #       echo "!!! need be root, your id -u is: $(id -u)"
   #       exit;

@@ -1,4 +1,4 @@
-function _koi.reset-repos -d 'drop all local modify' -a target
+function _koi.reset-repos -a target
   if test ! "$target"
     set target .
   end

@@ -26,34 +26,8 @@ koi
 
 ## Features
 
-### Custom Libs
+---
 
-极简的个人脚本插入。创建个人脚本只需要以下几步:
-
-#### 1. 创建个人脚本仓库
-
-个人脚本目前支持的结构如下：
-
-
-
-```fish
-# add / update lib with repos url
-koi up-lib git@github.com:youracc/project
-
-# update lib with repos url
-koi up-lib project
-
-# update all libs
-koi up-lib
-```
-
-# License
-
-[MIT][mit] © [veeshan-io][author] et [al][contributors]
-
-[mit]:            https://opensource.org/licenses/MIT
 [author]:         https://github.com/veeshan-io
-[contributors]:   https://github.com/veeshan-io/plugin-koi/graphs/contributors
+[contributors]:   https://github.com/veeshan-io/koi/graphs/contributors
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
-
-[license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square

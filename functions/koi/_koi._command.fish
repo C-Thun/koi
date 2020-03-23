@@ -1,5 +1,12 @@
 function _koi._command -a name
-  set -l commands help up-lib register-host install-deb pull-file renew-repos reset-repos turn-site build-lib
+  set -l commands
+  for func in (functions -a)
+    set -l tmp (string match -r '^_koi\.(.+)' $func)
+    if test (count $tmp) -gt 0
+      set commands $commands $tmp[2]
+    end
+  end
+
   if test (count $argv) -gt 0
     for command in $commands
       if test "$name" = "$command"
@@ -11,3 +18,5 @@ function _koi._command -a name
     echo $commands
   end
 end
+
+

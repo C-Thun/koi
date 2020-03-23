@@ -1,4 +1,4 @@
-function _koi.pull-file -d '拉取并下载某个文件' -a url dist
+function _koi.pull-file -a url dist
   echo pull-file $url $dist
 end
 

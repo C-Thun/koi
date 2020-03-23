@@ -1,4 +1,4 @@
-function _koi.renew-repos -d 'update repos let same as origin' -a target
+function _koi.renew-repos -a target
   if test ! "$target"
     set target .
   end
