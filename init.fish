@@ -22,7 +22,7 @@ autoload $path/functions/koi/_specs
 
 # Set completions for koi
 complete -c koi -f
-for subcommand in (_koi._command)
+for subcommand in (_koi.command)
   complete -c koi -f -a $subcommand -n "__fish_use_subcommand"
 end
 

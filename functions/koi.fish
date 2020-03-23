@@ -1,4 +1,7 @@
 function _koi
+  # 获取当前文件所在目录
+  set -l DIR (dirname (status -f))
+
   # Parse any options before the command name.
   while set -q argv[1]
     switch $argv[1]
@@ -37,7 +40,7 @@ function _koi
   end
 
   # Lookup the function for the requested command.
-  set -l command_name (_koi._command $command)
+  set -l command_name (_koi.command $command)
   if test -z "$command_name"
     echo (omf::err)"Unknown command: $command"(omf::off) >&2
     return $OMF_UNKNOWN_OPT
