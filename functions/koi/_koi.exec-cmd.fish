@@ -1,4 +1,4 @@
-function _koi.exec-cmd -a cmd need_root
+function _koi.exec-cmd -a cmd need_root debug
   if not test -z $need_root; and test (id -u) -ne 0
     set cmd sudo $cmd
   end
@@ -7,7 +7,9 @@ function _koi.exec-cmd -a cmd need_root
   #   $cmd
   # end"
 
-  echo ">>> exec cmd: $cmd"
+  if not test -z $debug
+    echo ">>> exec cmd: $cmd"
+  end
 
   echo "function ___last_command --no-scope-shadowing
     $cmd
