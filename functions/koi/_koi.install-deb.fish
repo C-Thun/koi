@@ -4,5 +4,5 @@ function _koi.install-deb -a url
 
   koi exec-cmd "dpkg -i /tmp/$tmpfile" y
 
-  # rm -rf /tmp/$tmpfile
+  rm -rf /tmp/$tmpfile
 end

@@ -4,11 +4,7 @@ function _koi.exec-cmd -a cmd need_root
   end
 
   echo "function ___last_command --no-scope-shadowing
-    \$argv
-  end"
-
-  echo "function ___last_command --no-scope-shadowing
-    \$argv
+    $cmd
   end" | source
-  ___last_command $cmd
+  ___last_command
 end
