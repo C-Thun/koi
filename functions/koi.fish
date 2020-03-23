@@ -1,4 +1,4 @@
-function _koi
+function koi
   # 获取当前文件所在目录
   set -l DIR (dirname (status -f))
 
