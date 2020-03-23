@@ -4,6 +4,7 @@ function _koi.help -a url
   for i in (seq (count $commands))
     set -l command _koi.$commands[$i]
     set -l tmp (functions $command)
+    echo $tmp
     set -l FUNC_DIR (dirname (string match -r '\# Defined in ([^\@]+)' $tmp[1]))
     echo $FUNC_DIR $commands[$i]
   end
