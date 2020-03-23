@@ -10,7 +10,7 @@ function _koi.help
     echo - $commands[$i]
 
     set -l help_func _koi_specs.$command.$LANG
-    if test (functions $help_func) -gt 0
+    if functions $help_func
       # Execute the command.
       echo "function ___last_command --no-scope-shadowing
         $help_func \$argv

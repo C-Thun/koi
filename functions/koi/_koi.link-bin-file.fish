@@ -1,7 +1,6 @@
 function _koi.link-bin-file -a dir uri
   # 重新构建
-  set -l klib_count (count ls local/bin/)
-  if test $klib_count -gt 2
+  if test (count ls local/bin/) -gt 2
     for file in (echo ~/local/klib/*/bin/*)
       chmod +x $file
 
