@@ -1,5 +1,5 @@
 function _koi._command -a name
-  set -l commands help up-lib register-host install-deb pull-file renew-repos reset-repos turn-site
+  set -l commands help up-lib register-host install-deb pull-file renew-repos reset-repos turn-site build-lib
   if test (count $argv) -gt 0
     for command in $commands
       if test "$name" = "$command"

@@ -18,12 +18,14 @@ end
 
 # Autoload
 autoload $path/functions/koi
-
-# Load init
-# TODO: 待完成
+autoload $path/functions/koi/_specs
 
 # Set completions for koi
 complete -c koi -f
 for subcommand in (_koi._command)
   complete -c koi -f -a $subcommand -n "__fish_use_subcommand"
 end
+
+# Load init
+# TODO: 待完成
+koi build-lib
