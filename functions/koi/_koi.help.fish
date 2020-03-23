@@ -5,12 +5,12 @@ function _koi.help
 
     # 这里不再负责帮助函数载入，各库自行在init.fish中使用autoload载入
     # 所以当前不需要取函数定义文件目录
-    set -l FUNC_DIR (koi dir-func $command)
+    # set -l FUNC_DIR (koi dir-func $command)
 
     echo - $commands[$i]
 
-    set -l help_func _koi_spec.$command
-    if functions $help_func
+    set -l help_func _koi_spec.$commands[$i]
+    if test (count (functions $help_func)) -gt 1
       # Execute the command.
       echo "function ___last_command --no-scope-shadowing
         $help_func base $LANG \$argv
@@ -18,5 +18,6 @@ function _koi.help
 
       ___last_command $argv
     end
+    echo
   end
 end

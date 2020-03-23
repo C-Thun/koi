@@ -21,5 +21,4 @@ function _koi_spec.help -a spec lang
         ___spec_base
     end
   end
-  echo '帮助信息'
 end
