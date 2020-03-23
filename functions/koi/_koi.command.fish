@@ -2,7 +2,7 @@ function _koi.command -a name
   set -l commands
   for func in (functions -a)
     set -l tmp (string match -r '^_koi\.(.+)' $func)
-    if not set -q $tmp
+    if test (count $tmp) -gt 0
       set commands $commands $tmp[2]
     end
   end
