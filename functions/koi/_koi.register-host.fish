@@ -6,7 +6,7 @@ function _koi.register-host -a domain ip apply
   end
 
   if not test -z $apply
-    set -l cmd $cmd -i
+    set cmd $cmd -i
   end
 
   if test -z $ip

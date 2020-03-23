@@ -1,4 +1,4 @@
-function _koi.link-bin-file -a dir uri
+function _koi.build-bin-link -a dir uri
   # 重新构建
   if test (count ls local/bin/) -gt 2
     for file in (echo ~/local/klib/*/bin/*)
