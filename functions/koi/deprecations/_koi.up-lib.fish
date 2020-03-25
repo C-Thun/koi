@@ -32,8 +32,8 @@ function _koi.up-lib -a uri
   end
 
   # 重新构建
-  set -l klib_count (count ls local/bin/)
-  if test $klib_count -gt 2
+  set -l klib_count (count (string split ' ' (ls local/bin/)))
+  if test $klib_count -gt 0
     for file in (echo ~/local/klib/*/bin/*)
       chmod +x $file
 
