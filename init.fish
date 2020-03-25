@@ -12,9 +12,11 @@ end
 set -x PATH $HOME/local/bin $PATH
 
 # 清除bin目录下的无效软链
-for file in (string split ' ' (echo $HOME/local/bin/*))
-  if not test -e $file
-    rm $file
+if test (count ls $HOME/local/bin) -gt 2
+  for file in (string split ' ' (echo $HOME/local/bin/*))
+    if not test -e $file
+      rm $file
+    end
   end
 end
 
