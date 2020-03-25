@@ -1,15 +1,13 @@
-function _koi.build-bin-link -a dir uri
-  # 重新构建
-  if test (count ls local/bin/) -gt 2
-    for file in (echo ~/local/klib/*/bin/*)
+function _koi.build-bin-link -a dir
+  # 遍历目录，把缺失的软链补上
+  if test (count ls $dir) -gt 2
+    for file in (string split ' ' (echo $dir/*))
       chmod +x $file
 
-      set rootname (basename (echo $file | sed 's/\.[^.]*$//'))
-      if not test -e ~/local/bin/$rootname
-        ln -s $file ~/local/bin/$rootname
+      set -l bin_name (basename (echo $file | sed 's/\.[^.]*$//'))
+      if not test -e ~/local/bin/$bin_name
+        ln -s $file ~/local/bin/$bin_name
       end
     end
-  else
-    echo "There are not klib installed now."
   end
 end

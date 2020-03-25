@@ -11,6 +11,14 @@ if not test -e $HOME/local/bin
 end
 set -x PATH $HOME/local/bin $PATH
 
+# 清除bin目录下的无效软链
+for file in (string split ' ' (echo $HOME/local/bin/*))
+  if not test -e $file
+    rm $file
+  end
+end
+
+
 # Autoload
 autoload $path/functions/koi
 autoload $path/functions/koi/_specs
@@ -20,3 +28,4 @@ complete -c koi -f
 for subcommand in (_koi.command)
   complete -c koi -f -a $subcommand -n "__fish_use_subcommand"
 end
+
