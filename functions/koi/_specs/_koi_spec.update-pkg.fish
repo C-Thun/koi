@@ -1,4 +1,4 @@
-function _koi_spec.update-completions -a spec lang
+function _koi_spec.update-pkg -a spec lang
   function ___spec_base
     echo '更新omf包(支持回滚式更新)'
   end
