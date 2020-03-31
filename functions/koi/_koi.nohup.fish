@@ -1,5 +1,5 @@
 function _koi.nohup -a func
-  if test -z $func
+  if test -z "$func"
     echo Usage: koi nohup \<func\>
     return $OMF_UNKNOWN_OPT
   end

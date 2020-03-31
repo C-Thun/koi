@@ -1,7 +1,7 @@
 function _koi.help -a name
   set -l commands (string split ' ' (_koi.command))
   for i in (seq (count $commands))
-    if not test -z $name
+    if not test -z "$name"
       if test $name = $commands[$i]
         echo - $commands[$i]
 

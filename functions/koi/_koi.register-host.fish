@@ -1,6 +1,6 @@
 function _koi.register-host -a domain ip apply
   set -l cmd sed
-  if not test -z $apply
+  if not test -z "$apply"
     set cmd $cmd -i
   end
 
@@ -11,7 +11,7 @@ function _koi.register-host -a domain ip apply
     koi exec-cmd "$cmd '\$a\\$ip\t$domain\t' /etc/hosts" y
   end
 
-  if not test -z $apply
+  if not test -z "$apply"
     cat /etc/hosts
   end
 

@@ -1,5 +1,5 @@
 function _koi.exec-cmd -a cmd need_root debug
-  if not test -z $need_root; and test (id -u) -ne 0
+  if not test -z "$need_root"; and test (id -u) -ne 0
     set cmd sudo $cmd
   end
 
@@ -7,7 +7,7 @@ function _koi.exec-cmd -a cmd need_root debug
   #   $cmd
   # end"
 
-  if not test -z $debug
+  if not test -z "$debug"
     echo ">>> exec cmd: $cmd"
   end
 
