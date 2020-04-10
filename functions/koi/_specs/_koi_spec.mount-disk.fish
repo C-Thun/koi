@@ -1,4 +1,4 @@
-function _koi_spec.update-pkg -a spec lang
+function _koi_spec.mount-disk -a spec lang
   function ___spec_base
     echo '自动化挂载磁盘'
   end
