@@ -10,36 +10,36 @@ function _koi.up-lib -a uri
     end
 
     # 导入项目
-    if test -d ~/local/klib/$path
-      koi renew-repos ~/local/klib/$path
+    if test -d $HOME/.local/klib/$path
+      koi renew-repos $HOME/.local/klib/$path
     else
-      git -C ~/local/klib clone $uri
+      git -C $HOME/.local/klib clone $uri
     end
   else
     # 全部更新
-    for path in (ls ~/local/klib)
+    for path in (ls $HOME/.local/klib)
       echo - Renew repository: [ $path ]
-      koi renew-repos ~/local/klib/$path
+      koi renew-repos $HOME/.local/klib/$path
     end
   end
 
-  # 移除local/bin下的软链
-  for file in (ls ~/local/bin)
-    if test -L ~/local/bin/$file
-      and not test -e ~/local/bin/$file
-      rm ~/local/bin/$file
+  # 移除 .local/bin 下的软链
+  for file in (ls $HOME/.local/bin)
+    if test -L $HOME/.local/bin/$file
+      and not test -e $HOME/.local/bin/$file
+      rm $HOME/.local/bin/$file
     end
   end
 
   # 重新构建
-  set -l klib_count (count (string split ' ' (ls local/bin/)))
+  set -l klib_count (count (string split ' ' (ls .local/bin/)))
   if test $klib_count -gt 0
-    for file in (echo ~/local/klib/*/bin/*)
+    for file in (echo $HOME/.local/klib/*/bin/*)
       chmod +x $file
 
       set rootname (basename (echo $file | sed 's/\.[^.]*$//'))
-      if not test -e ~/local/bin/$rootname
-        ln -s $file ~/local/bin/$rootname
+      if not test -e $HOME/.local/bin/$rootname
+        ln -s $file $HOME/.local/bin/$rootname
       end
     end
   else
