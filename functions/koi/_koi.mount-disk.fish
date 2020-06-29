@@ -1,4 +1,4 @@
-# koi mount-disk vdb1 /opt/data01 ashe
+# koi mount-disk vdb1 /opt/data01 grace
 function _koi.mount-disk -a dev target user
   if test -z "$dev"; or test -z "$target"
     echo Usage: koi mount-disk \<dev\> \<target\>[ \<user\>]

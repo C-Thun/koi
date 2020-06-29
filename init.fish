@@ -9,7 +9,7 @@
 if not test -e $HOME/.local/bin
   mkdir -p $HOME/.local/bin
 end
-set -x PATH $HOME/.local/bin $PATH
+set -xg PATH $HOME/.local/bin $PATH
 
 # 清除bin目录下的无效软链
 if test (count (string split ' ' (ls $HOME/.local/bin))) -gt 0
