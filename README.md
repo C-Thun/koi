@@ -11,6 +11,8 @@
 ## Install
 
 ```fish
+omf install git@github.com:veeshan-io/koi
+# or
 omf install https://github.com/veeshan-io/koi
 ```
 
