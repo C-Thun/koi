@@ -10,10 +10,18 @@
 
 ## Install
 
-```fish
-omf install git@github.com:veeshan-io/koi
+If you not have omf, run it first:
+
+```sh
+curl -sfL https://gitee.com/andares/installers/raw/master/fish/install-omf | fish
 # or
+curl -L https://get.oh-my.fish | fish
+```
+
+```fish
 omf install https://github.com/veeshan-io/koi
+# or
+omf install git@github.com:veeshan-io/koi
 ```
 
 ## Usage
