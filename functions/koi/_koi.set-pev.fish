@@ -4,10 +4,10 @@ function _koi.set-pev -a name value
     return $OMF_UNKNOWN_OPT
   end
 
-  if not test -f $HOME/koi_pev.fish
-    touch $HOME/koi_pev.fish
+  if not test -f $HOME/.koi_pev.fish
+    touch $HOME/.koi_pev.fish
   end
 
-  sed '/^set -xg $name $value\$/d' $HOME/koi_pev.fish
-  sed '\$a\\set -xg $name $value' $HOME/koi_pev.fish
+  koi exec-cmd "sed -i '/^set -xg $name $value\$/d' $HOME/.koi_pev.fish"
+  koi exec-cmd "sed -i '\$a\\set -xg $name $value' $HOME/.koi_pev.fish"
 end
