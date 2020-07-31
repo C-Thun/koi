@@ -5,7 +5,7 @@ function _koi.set-pev -a name value
   end
 
   if not test -f $HOME/.koi_pev.fish
-    echo '# KOI Persistent Environment Variables' $HOME/.koi_pev.fish
+    echo '# KOI Persistent Environment Variables' > $HOME/.koi_pev.fish
   end
 
   koi exec-cmd "sed -i '/^set -xg $name $value\$/d' $HOME/.koi_pev.fish"
