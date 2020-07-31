@@ -20,6 +20,10 @@ if test (count (string split ' ' (ls $HOME/.local/bin))) -gt 0
   end
 end
 
+# PEV support
+if test -f $HOME/.koi_pev.fish
+  source $HOME/.koi_pev.fish
+end
 
 # Autoload
 autoload $path/functions/koi
