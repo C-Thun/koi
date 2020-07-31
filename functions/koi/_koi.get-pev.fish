@@ -1,6 +1,6 @@
 function _koi.get-pev -a name
   if not test -f $HOME/.koi_pev.fish
-    touch $HOME/.koi_pev.fish
+    echo '# KOI Persistent Environment Variables' $HOME/.koi_pev.fish
   end
 
   if test -z "$name"

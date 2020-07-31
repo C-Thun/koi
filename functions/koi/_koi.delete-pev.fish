@@ -5,7 +5,7 @@ function _koi.delete-pev -a name
   end
 
   if not test -f $HOME/.koi_pev.fish
-    touch $HOME/.koi_pev.fish
+    echo '# KOI Persistent Environment Variables' $HOME/.koi_pev.fish
   end
 
   sed '/^set -xg $name $value\$/d' $HOME/.koi_pev.fish
