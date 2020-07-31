@@ -8,5 +8,5 @@ function _koi.delete-pev -a name
     echo '# KOI Persistent Environment Variables' > $HOME/.koi_pev.fish
   end
 
-  koi exec-cmd "sed -i '/^set -xg $name $value\$/d' $HOME/.koi_pev.fish"
+  koi exec-cmd "sed -i '/^set -xg $name/d' $HOME/.koi_pev.fish"
 end
