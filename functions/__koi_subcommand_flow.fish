@@ -3,7 +3,7 @@ function __koi_subcommand_flow
     set -e cmd[1]
 
     for i in $argv
-        if test $cmd[$i] != $argv[$i]
+        if test $cmd[$i] -ne $argv[$i]
             return 0
         end
     end
