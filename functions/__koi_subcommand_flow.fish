@@ -14,6 +14,7 @@ function __koi_subcommand_flow
         else
             set check_cmd $cmd[1]
         end
+        echo $cmd >> ~/debug.log
         echo test $check_cmd -ne $i >> ~/debug.log
         if test "$check_cmd" -ne "$i"
             return 0
