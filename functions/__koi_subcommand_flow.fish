@@ -19,7 +19,12 @@ function __koi_subcommand_flow
         if test "$check_cmd" -ne "$i"
             return 0
         end
-        set -e cmd[1]
+
+        if test (count $cmd) -eq 1
+            break
+        else
+            set -e cmd[1]
+        end
     end
 
     return 1
