@@ -11,6 +11,9 @@ if not test -e $HOME/.local/bin
 end
 set -xg PATH $HOME/.local/bin $PATH
 
+# build-image 所用路径
+set -xg image_dockerfile_repos
+
 # 清除bin目录下的无效软链
 if test (count (string split ' ' (ls $HOME/.local/bin))) -gt 0
   for file in (string split ' ' (echo $HOME/.local/bin/*))
