@@ -2,30 +2,26 @@ function __koi_subcommand_flow
     set -l cmd (commandline -poc)
     set -e cmd[1]
 
+    if test (count $cmd) -ne (count $argv)
+        return 1
+    end
+    # echo ==== start >> ~/debug.log
+    # echo $argv $cmd >> ~/debug.log
+
     set -l check_cmd
     for i in $argv
-        # argv 未走完但cmd已经没有了
-        if test (count $cmd) -eq 0
-            return 0
-        end
-
         if test (count $cmd) -eq 1
-            set check_cmd $cmd
+            if test "$cmd" != "$i"
+                return 1
+            end
         else
             set check_cmd $cmd[1]
-        end
-        echo $cmd >> ~/debug.log
-        echo test $check_cmd -ne $i >> ~/debug.log
-        if test "$check_cmd" -ne "$i"
-            return 0
-        end
-
-        if test (count $cmd) -eq 1
-            break
-        else
+            if test "$check_cmd" != "$i"
+                return 1
+            end
             set -e cmd[1]
         end
     end
 
-    return 1
+    return 0
 end
