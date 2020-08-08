@@ -1,3 +1,4 @@
+# start with 0
 function __koi_subcommand_pos
     set -l cmd (commandline -poc)
     set -e cmd[1]
