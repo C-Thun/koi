@@ -11,12 +11,12 @@ function __koi_subcommand_flow
     set -l check_cmd
     for i in $argv
         if test (count $cmd) -eq 1
-            if test "$cmd" != "$i"; and test "$i" != '*'
+            if test "$cmd" != "$i"; and test "$i" != '%'
                 return 1
             end
         else
             set check_cmd $cmd[1]
-            if test "$check_cmd" != "$i"; and test "$i" != '*'
+            if test "$check_cmd" != "$i"; and test "$i" != '%'
                 return 1
             end
             set -e cmd[1]
