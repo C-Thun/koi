@@ -33,6 +33,7 @@ autoload $path/functions/koi/_specs
 if not test -z "$autoclear_history"; and test $autoclear_history -gt 0
   function _hook_autoclear_history --on-process-exit %self
       builtin history clear
+      history clear
       echo Session history scrubbed.  Goodbye
   end
 end
