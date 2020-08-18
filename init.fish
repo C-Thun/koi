@@ -30,9 +30,10 @@ autoload $path/functions/koi
 autoload $path/functions/koi/_specs
 
 # Set Hooks
-for file in (string split ' ' (echo $path/hooks/*.fish))
-  if not test -L $HOME/.config/fish/conf.d/(basename $file)
-    ln -s $file $HOME/.config/fish/conf.d/(basename $file)
+if not test -z "$autoclear_history"; and test $autoclear_history -gt 0
+  function _hook_autoclear_history --on-process-exit %self
+      builtin history clear
+      echo Session history scrubbed.  Goodbye
   end
 end
 
