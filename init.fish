@@ -28,6 +28,7 @@ end
 # Autoload
 autoload $path/functions/koi
 autoload $path/functions/koi/_specs
+autoload $path/functions/hooks
 
 # Set completions for koi
 koi update-completions

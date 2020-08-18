@@ -9,4 +9,6 @@ function _koi.delete-pev -a name
   end
 
   koi exec-cmd "sed -i '/^set -xg $name/d' $HOME/.koi_pev.fish"
+
+  set -xge $name
 end

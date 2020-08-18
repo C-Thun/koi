@@ -30,6 +30,10 @@ omf install git@github.com:veeshan-io/koi
 koi
 ```
 
+### Enable auto clear history
+
+
+
 ## Features
 
 ---
