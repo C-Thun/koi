@@ -28,7 +28,13 @@ end
 # Autoload
 autoload $path/functions/koi
 autoload $path/functions/koi/_specs
-autoload $path/functions/hooks
+
+# Set Hooks
+for file in (string split ' ' (echo $path/hooks/*.fish))
+  if not test -L $HOME/.config/fish/conf.d/(basename $file)
+    ln -s $file $HOME/.config/fish/conf.d/(basename $file)
+  end
+end
 
 # Set completions for koi
 koi update-completions
