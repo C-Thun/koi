@@ -30,9 +30,21 @@ omf install git@github.com:veeshan-io/koi
 koi
 ```
 
-### Enable auto clear history
+### Auto clear history
 
+Enable:
 
+```fish
+koi set-pev autoclear_history 1
+```
+
+Disable:
+
+```fish
+koi delete-pev autoclear_history
+# or
+koi set-pev autoclear_history 0
+```
 
 ## Features
 
