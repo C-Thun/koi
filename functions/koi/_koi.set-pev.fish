@@ -11,5 +11,5 @@ function _koi.set-pev -a name value
   koi exec-cmd "sed -i '/^set -xg $name $value\$/d' $HOME/.koi_pev.fish"
   koi exec-cmd "sed -i '\$a\\set -xg $name $value' $HOME/.koi_pev.fish"
 
-  set -xg $name $value
+  set -xg "$name" "$value"
 end
