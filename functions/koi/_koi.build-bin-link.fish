@@ -4,8 +4,8 @@ function _koi.build-bin-link -a dir
       chmod +x $file
 
       set -l bin_name (basename (echo $file | sed 's/\.[^.]*$//'))
-      if not test -e $HOME/.local/bin/$bin_name
-        ln -s $file $HOME/.local/bin/$bin_name
+      if not test -e $HOME/apps/bin/$bin_name
+        ln -s $file $HOME/apps/bin/$bin_name
       end
     end
   end

@@ -5,15 +5,15 @@
 # * $path          package path
 # * $dependencies  package dependencies
 
-# Create user { local/bin } dir
-if not test -e $HOME/.local/bin
-  mkdir -p $HOME/.local/bin
+# Create apps dir
+if not test -e $HOME/apps/bin
+  mkdir -p $HOME/apps/bin
 end
-set -xg PATH $HOME/.local/bin $PATH
+set -xg PATH $HOME/apps/bin $PATH
 
 # 清除bin目录下的无效软链
-if test (count (string split ' ' (ls $HOME/.local/bin))) -gt 0
-  for file in (string split ' ' (echo $HOME/.local/bin/*))
+if test (count (string split ' ' (ls $HOME/apps/bin))) -gt 0
+  for file in (string split ' ' (echo $HOME/apps/bin/*))
     if not test -e $file
       rm $file
     end
