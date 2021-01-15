@@ -1,7 +1,7 @@
 function _koi.build-bin-link -a dir
   if not test -z "$dir"; and test (count (string split ' ' (ls $dir))) -gt 0
     for file in (string split ' ' (echo $dir/*))
-      if test -l $file
+      if test -L $file
         continue
       end
       chmod +x $file
