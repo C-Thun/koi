@@ -5,6 +5,10 @@
 # * $path          package path
 # * $dependencies  package dependencies
 
+# 指示自身目录
+set -l DIR (dirname (status -f))
+set -xg KOI_DIR $DIR
+
 # Create apps dir
 if not test -e $HOME/apps/bin
   mkdir -p $HOME/apps/bin
