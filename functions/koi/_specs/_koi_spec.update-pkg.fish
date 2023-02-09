@@ -7,18 +7,8 @@ function _koi_spec.update-pkg -a spec lang
   end
 
   if test $spec = 'man'
-    switch $lang
-      case en_US.UTF-8
-        ___spec_man
-      case zh_CN.UTF-8
-        ___spec_man
-    end
+    ___spec_man
   else # include 'base'
-    switch $lang
-      case en_US.UTF-8
-        ___spec_base
-      case zh_CN.UTF-8
-        ___spec_base
-    end
+    ___spec_base
   end
 end
