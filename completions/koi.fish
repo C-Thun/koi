@@ -6,7 +6,6 @@
 # If your package doesn't provide any command line utility,
 # feel free to remove completions directory from the project.
 
-complete -c "koi mod-site" -f
-complete -c "koi mod-site" -n "not __fish_seen_subcommand_from enable disable" -a "enable disable"
-complete -c "koi mod-site" -n "__fish_seen_subcommand_from enable" -f -a (string join ' ' (ls /etc/nginx/sites-available))
-complete -c "koi mod-site" -n "__fish_seen_subcommand_from disable" -f -a (string join ' ' (ls /etc/nginx/sites-enabled))
+complete -c koi -n "__fish_seen_subcommand_from mod-site" -a "enable disable"
+complete -c koi -n "__koi_subcommand_flow mod-site enable" -f -a (string join ' ' (ls /etc/nginx/sites-available))
+complete -c koi -n "__koi_subcommand_flow mod-site disable" -f -a (string join ' ' (ls /etc/nginx/sites-enabled))

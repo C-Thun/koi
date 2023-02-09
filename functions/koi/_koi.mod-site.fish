@@ -24,9 +24,10 @@ function _koi.mod-site -a mod
   sudo systemctl restart nginx
 
   # 刷新 completions
-  complete -c "koi mod-site" -e
-  complete -c "koi mod-site" -f
-  complete -c "koi mod-site" -n "not __fish_seen_subcommand_from enable disable" -a "enable disable"
-  complete -c "koi mod-site" -n "__fish_seen_subcommand_from enable" -f -a (string join ' ' (ls /etc/nginx/sites-available))
-  complete -c "koi mod-site" -n "__fish_seen_subcommand_from disable" -f -a (string join ' ' (ls /etc/nginx/sites-enabled))
+  complete -c koi -n "__fish_seen_subcommand_from mod-site" -e
+  complete -c koi -n "__fish_seen_subcommand_from mod-site" -a "enable disable"
+  complete -c koi -n "__koi_subcommand_flow mod-site enable" -e
+  complete -c koi -n "__koi_subcommand_flow mod-site enable" -f -a (string join ' ' (ls /etc/nginx/sites-available))
+  complete -c koi -n "__koi_subcommand_flow mod-site disable" -e
+  complete -c koi -n "__koi_subcommand_flow mod-site disable" -f -a (string join ' ' (ls /etc/nginx/sites-enabled))
 end
