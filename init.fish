@@ -16,7 +16,7 @@ end
 set -xg PATH $HOME/apps/bin $PATH
 
 # 之后的koi发展将以 ~/.local 作为一个关键目录
-set -xg PATH $HOME/.local $PATH
+set -xg PATH $HOME/.local/bin $PATH
 
 # 清除bin目录下的无效软链
 if test (count (string split ' ' (ls $HOME/apps/bin))) -gt 0
