@@ -32,6 +32,10 @@ if test -f $HOME/.koi_pev.fish
   source $HOME/.koi_pev.fish
 end
 
+if test -f $HOME/.koi.fish
+  source $HOME/.koi.fish
+end
+
 # Autoload
 autoload $path/functions/koi
 autoload $path/functions/koi/_specs
