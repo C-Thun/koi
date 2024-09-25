@@ -41,18 +41,14 @@ end
 set -xg LOCAL_DIR $HOME/.local
 set -xg LOCAL_BIN $HOME/.local/bin
 
-# PEV support
-if test -f $HOME/.koi_pev.fish
-  source $HOME/.koi_pev.fish
-end
-
-if test -f $HOME/.koi.fish
-  source $HOME/.koi.fish
+# rc file support
+if test -f $HOME/.koirc.fish
+  source $HOME/.koirc.fish
 end
 
 # Autoload
-autoload $path/functions/koi
-autoload $path/functions/koi/_specs
+autoload $KOI_DIR/functions/koi
+autoload $KOI_DIR/functions/koi/_specs
 
 # Set Hooks
 if not test -z "$autoclear_history"; and test $autoclear_history -gt 0

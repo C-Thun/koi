@@ -1,10 +1,10 @@
-function _koi.get-pev -a name
-  if not test -f $HOME/.koi_pev.fish
-    echo '# KOI Persistent Environment Variables' > $HOME/.koi_pev.fish
+function _koi.get-rc -a name
+  if not test -f $HOME/.koirc.fish
+    echo '# KOI Persistent Environment Variables' > $HOME/.koirc.fish
   end
 
   set -l tmp
-  for line in (string split "\n" (cat $HOME/.koi_pev.fish))
+  for line in (string split "\n" (cat $HOME/.koirc.fish))
     set tmp (string match -r '^set \-xg ([^\s]+) ([^\s]+)$' $line)
     if not test (count $tmp) -eq 3
       continue

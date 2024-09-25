@@ -35,15 +35,15 @@ koi
 Enable:
 
 ```fish
-koi set-pev autoclear_history 1
+koi set-rc autoclear_history 1
 ```
 
 Disable:
 
 ```fish
-koi delete-pev autoclear_history
+koi delete-rc autoclear_history
 # or
-koi set-pev autoclear_history 0
+koi set-rc autoclear_history 0
 ```
 
 ## Features
