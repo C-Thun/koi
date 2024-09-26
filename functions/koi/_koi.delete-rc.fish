@@ -1,6 +1,7 @@
 function _koi.delete-rc -a name
-  if test -z "$name"
+  if not set -q $name
     echo Usage: koi delete-rc \<name\>
+    echo - Variable must be defined.
     return $OMF_UNKNOWN_OPT
   end
 
@@ -10,5 +11,5 @@ function _koi.delete-rc -a name
 
   koi exec-cmd "sed -i '/^set -xg $name/d' $HOME/.koirc.fish"
 
-  set -xge $name
+  set -ge $name
 end

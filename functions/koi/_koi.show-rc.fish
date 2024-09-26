@@ -1,6 +1,6 @@
-function _koi.get-rc -a name
+function _koi.show-rc -a name
   if not test -f $HOME/.koirc.fish
-    echo '# KOI Persistent Environment Variables' > $HOME/.koirc.fish
+    echo '# KOI RC Environment Variables' > $HOME/.koirc.fish
   end
 
   set -l tmp
