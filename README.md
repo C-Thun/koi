@@ -19,9 +19,7 @@ curl -L https://get.oh-my.fish | fish
 ```
 
 ```fish
-omf install https://github.com/veeshan-io/koi
-# or
-omf install git@github.com:veeshan-io/koi
+omf install https://github.com/C-Thun/koi
 ```
 
 ## Usage
@@ -50,6 +48,6 @@ koi set-rc autoclear_history 0
 
 ---
 
-[author]:         https://github.com/veeshan-io
-[contributors]:   https://github.com/veeshan-io/koi/graphs/contributors
+[author]:         https://github.com/C-Thun/koi
+[contributors]:   https://github.com/C-Thun/koi/graphs/contributors
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
